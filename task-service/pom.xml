@@ -75,6 +75,9 @@
                     <image>
                         <builder>dashaun/builder:tiny</builder>
                         <name>${project.groupId}/task-service:${project.version}</name>
+                        <env>
+                            <BP_JVM_VERSION>${java.version}</BP_JVM_VERSION>
+                        </env>
                     </image>
                 </configuration>
                 <executions>
