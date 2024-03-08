@@ -43,6 +43,7 @@
 		<spring-cloud.version>3.1.4</spring-cloud.version>
 		<maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
 		<resilience4j.version>2.1.3</resilience4j.version>
+		<micrometer-registry-prometheus.version>1.9.0</micrometer-registry-prometheus.version>
 	</properties>
 
 <!--	<properties>-->
@@ -137,6 +138,28 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-starter-aop</artifactId>
 				<version>${spring-boot.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-starter-sleuth</artifactId>
+				<version>${spring-cloud.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-sleuth-zipkin</artifactId>
+				<version>${spring-cloud.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>io.micrometer</groupId>
+				<artifactId>micrometer-registry-prometheus</artifactId>
+				<version>${micrometer-registry-prometheus.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.micrometer</groupId>
+				<artifactId>micrometer-core</artifactId>
+				<version>${micrometer-registry-prometheus.version}</version>
 			</dependency>
 
 			<dependency>
