@@ -38,6 +38,12 @@ spring:
           filters:
             - RewritePath=/v3/api-docs/(?<path>.*), /$\{path}/v3/api-docs
 
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://host.docker.internal:8080/auth/realms/master/protocol/openid-connect/certs
+
 
 server:
   port: 8762
